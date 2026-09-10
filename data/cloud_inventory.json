@@ -1,0 +1,25 @@
+[
+  {
+    "id": "admin-role",
+    "type": "iam",
+    "actions": [
+      "*"
+    ],
+    "mfa_required": false,
+    "credential_type": "long_lived"
+  },
+  {
+    "id": "ssh-rule",
+    "type": "network",
+    "source": "0.0.0.0/0",
+    "port": 22,
+    "sensitive_backend": false
+  },
+  {
+    "id": "customer-backup",
+    "type": "storage",
+    "public": false,
+    "encrypted": true,
+    "logging": true
+  }
+]
